@@ -1,59 +1,75 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    outline: 0;
-    border: 0;
-    text-decoration: none;
-    list-style: none;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
 }
 /* default color */
-:root{
-    --font--primary:sans-serif;
-    --font--secondary:serif;
-    --font--logo: 'Times New Roman', Times, serif;
-    --text--dark: #131513 ;
-    --text--light: #383e3a ;
-    --bg--light: #9BD9D4 ;
-    --bg--dark: #2DABD5 ;
-    --btn--light: #6597C7 ;
-    --btn--dark: #0481B4 ;
-    --shadow: #BACEC1 ;
+:root {
+  --font--primary: sans-serif;
+  --font--secondary: serif;
+  --font--logo: "Times New Roman", Times, serif;
+  --text--dark: #131513;
+  --text--light: #383e3a;
+  --bg--light: #9bd9d4;
+  --bg--dark: #2dabd5;
+  --btn--light: #6597c7;
+  --btn--dark: #0481b4;
+  --shadow: #bacec1;
 }
 /* navbar section  */
-.navbar{
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-background-color: var(--bg--dark);
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--bg--dark);
 }
-.navbar__bars{
-    display: none;
+.navbar__bars {
+  display: none;
 }
 /* logo design  */
-.navbar__logo__link{
-    font-family: var(--font--logo);
-    font-size: 50px;
-    font-weight: 700;
-    color: var(--text--light);
+.navbar__logo__link {
+  font-family: var(--font--logo);
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--text--light);
 }
-.navbar__logo__link:hover{
-    color: var(--text--dark);
-
+.navbar__logo__link:hover {
+  color: var(--text--dark);
 }
 /* menu design  */
-.navbar__menu{
+.navbar__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__menu__item__link {
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 10px;
+  top: 10px;
+}
+.navbar__menu__item__link:hover {
+  color: var(--text--dark);
+}
+.submenu {
+    position: absolute;
+    top: 20px;
+}
+.submenu__item__link{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.submenu__item__link:hover {
+    color: var(--text--dark);
+}
+
 .navbar__menu__item__link{
-    display:grid;
-    place-items: center;
-    position: relative;
     background-color: var(--bg--light);
     color: var(--text--light);
-}
-.submenu{
-    position: absolute;
 }
