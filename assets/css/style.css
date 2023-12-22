@@ -1,128 +1,114 @@
-* {
+*{
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
     outline: 0;
     list-style: none;
     text-decoration: none;
     font-family: sans-serif;
 }
-
+/* default colors 
+*/
 :root {
     --text-light: #4c4e4f;
     --text-dark: #090c08;
     --bg-dark: #0072bb;
     --bg-light: #e9f5db;
 }
-
-.navbar {
-    background-color: var(--bg-dark);
+.navbar{
+    background-color: var(--bg--light);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 10px 0;
+    padding-block: 10px;
 }
-
-a {
-    font-weight: 700;
-}
-
-.navbar__logo a {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 45px;
-    font-weight: 900;
+.navbar__logo a{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 600;
     letter-spacing: 5px;
     padding: 10px;
     border-radius: 10px;
-    -webkit-text-stroke: var(--text-dark) 3px;
-    color: var(--text-light);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: var(--text--dark);
+    background-color: var(--bg--dark);
 }
-
-.navbar__logo a:hover {
-    color: var(--text-dark);
+.navbar__logo a:hover{
+    color: var(--text--light);
 }
-
-.navbar__menu {
+.navbar__menu{
     display: flex;
 }
-
-.navbar__menu__item {
+.navbar__menu__item{
     display: inline-flex;
 }
-
-.navbar__menu__item__link {
+.navbar__menu__item__link{
     margin: 5px;
-    display: flex;
-    flex-direction: column;
+    display:flex;
+    flex-direction:column ;
     justify-content: center;
     align-items: center;
     text-transform: capitalize;
     font-size: 18px;
     line-height: 25px;
     padding: 10px;
-    border-radius: 3px;
-    color: var(--text-light);
-    background-color: var(--bg-light);
-    transform: skew(-10deg);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: #A57C15;
+    background-color: var(--bg--dark);
 }
-
-.navbar__menu__item__link:hover {
-    color: var(--text-dark);
+.navbar__menu__item__link:hover{
+    color: var(--text--light);
 }
-
-.navbar__action__search {
+.navbar__action__search{
     padding: 5px;
     position: relative;
-    background-color: var(--bg-light);
+    background-color:var(--bg--dark);
 }
 
-.search-input::placeholder,
-.search-input,
-.navbar__action__search button i {
-    background-color: var(--bg-light);
-    border: 2px solid var(--bg-light);
-    outline: 2px solid var(--bg-light);
-    padding: 6px;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--text-light);
+.navbar__action__search input::placeholder,
+.navbar__action__search input,
+.navbar__action__search button i
+{
+    background-color:var(--bg--dark);
+    border: 2px var(--bg--dark) solid;
+    outline: 2px var(--bg--dark) solid;
+    padding: 2px;
+    margin: 0;
+    backface-visibility: ;
+    color:var(--text--dark);
+    -webkit-backface-visibility:;
 }
-
-.search-input {
-    color: var(--text-light);
+.navbar__action__search input{
+    background-color:var(--bg--dark);
+    color: var(--text--light);
 }
-
-.navbar__action__search button {
+.navbar__action__search button{
     cursor: pointer;
 }
-
-.navbar__menu__item {
-    position: relative;
-}
-
-.submenu {
-    transform: skew(-10deg);
-    position: absolute;
-    top: 100%;
-    right: -10px;
-    width: 150px;
-    padding: 10px;
-    background-color: var(--bg-dark);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    transform-origin: top right;
-}
-
-.navbar__menu__item:hover .submenu {
-    display: flex;
-}
-
-.submenu__item {
-    background-color: var(--bg-light);
-    height: auto;
-    text-align: center;
-    color: var(--text-light);
+.action__btn{
+    padding-block: 5px;
     font-weight: 800;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color:var(--bg--dark);
+    color: var(--text--dark);
+}
+.action__btn:hover{
+    color: var(--text--light);
+}
+.navbar__action{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
