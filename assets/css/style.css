@@ -25,6 +25,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 20px;
   background-color: var(--bg--dark);
 }
 .navbar__bars {
@@ -51,25 +52,26 @@
   place-items: center;
   position: relative;
   padding: 10px;
-  top: 10px;
-}
-.navbar__menu__item__link:hover {
-  color: var(--text--dark);
 }
 .submenu {
-    position: absolute;
-    top: 20px;
+  position: absolute;
+  background-color: #0481b4;
 }
 .submenu__item__link{
-    display: flex;
     justify-content: center;
     align-items: center;
-}
-.submenu__item__link:hover {
-    color: var(--text--dark);
-}
-
-.navbar__menu__item__link{
+    padding: 10px 20px;
+    display: none;
+  }
+  .navbar__menu__item__link,
+  .submenu__item__link{
     background-color: var(--bg--light);
     color: var(--text--light);
-}
+  }
+  .navbar__menu__item__link:hover,
+  .submenu__item__link:hover {
+    color: var(--text--dark);
+  }
+  .navbar__menu__item:hover .submenu__item__link {
+    display: flex;
+  }
