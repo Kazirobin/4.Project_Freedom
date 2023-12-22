@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two</title>
-    <!-- link css file  -->
-    <link rel="stylesheet" href="./style.css">
-    <!-- link font awesome  -->
+    <title>Freedom</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css' integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==' crossorigin='anonymous'/>
 </head>
 <body>
@@ -14,21 +12,28 @@
         <div class="navbar__logo"><a href="#">Freedom</a></div>
         <ul class="navbar__menu">
             <li class="navbar__menu__item">
-<a href="#" class="navbar__menu__item__link"><i class="fa fa-home"></i>home</a>
-<a href="#" class="navbar__menu__item__link"><i class="fa fa-user"></i>profile</a>
-<a href="#" class="navbar__menu__item__link"><i class="fa fa-message"></i>message</a>
-<a href="#" class="navbar__menu__item__link"><i class="fa fa-envelope-open"></i>notification</a>
-<a href="#" class="navbar__menu__item__link"><i class="fa fa-toolbox"></i>settings</a>
+                <a href="#" class="navbar__menu__item__link"><i class="fa fa-home"></i>Home</a>
+            </li>
+            <li class="navbar__menu__item">
+                <a href="#" class="navbar__menu__item__link"><i class="fa fa-user"></i>Profile</a>
+            </li>
+            <li class="navbar__menu__item">
+                <a href="#" class="navbar__menu__item__link"><i class="fa fa-message"></i>Message</a>
+            </li>
+            <li class="navbar__menu__item">
+                <a href="#" class="navbar__menu__item__link"><i class="fa fa-envelope-open"></i>Notification</a>
+            </li>
+            <li class="navbar__menu__item">
+                <a href="#" class="navbar__menu__item__link with-submenu"><i class="fa fa-toolbox"></i>Settings
+                    <div class="submenu">
+                        <a class="submenu__item" href="#">Log Out</a>
+                    </div>
+                </a>
             </li>
         </ul>
-        <div class="navbar__action">
-            <div class="navbar__action__search">
-                <input type="text" name="Search" placeholder="Search...." id="" class="">
-                <button><i class="fa fa-magnifying-glass"></i></button>
-            </div>
-
-
-            <a href="#" class="action__btn">Log Out</a>
+        <div class="navbar__action__search">
+            <input type="text" name="Search" placeholder="Search...." class="search-input">
+            <button><i class="fa fa-search"></i></button>
         </div>
     </nav>
 </body>
