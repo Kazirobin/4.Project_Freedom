@@ -1,0 +1,53 @@
+Home>>>>>
+-post
+-plas icon
+ -love  
+ -comment
+-share
+-save icon
+
+-recent activety
+
+Profile>>>>>
+-profile_pic
+-detail many kind
+-photos 
+
+Massage>>>>>
+-call icon
+-audio
+-video
+-voice record
+-text
+-imoji
+-reaction to text
+-drag and drop files
+-send icon 
+-friend 
+-group
+
+Notification>>>>>
+-mark all as seen
+-icon 
+-title
+-describes 
+-logo
+
+settings>>>>>
+-genarel
+ -user info
+ -language
+ -username
+ -password
+ -themes
+ -dark
+ -light
+-help support
+-support-inbox
+-help us for improves 
+-log out
+
+
+
+
+Search...
