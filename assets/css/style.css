@@ -73,7 +73,6 @@
 .submenu {
   position: absolute;
   margin-block-start: 10px;
-  margin-inline-start: -22px;
   background-color:var(--bg--dark);
   display: none;
 }
@@ -141,8 +140,8 @@
     flex-direction: column;
     gap: 20px;
   }
-  .navbar__logo{
-    display: inline-block;
+  .navbar__logo__link{
+    padding-inline-end: 50px;
   }
 }
 @media (max-width:700px){
