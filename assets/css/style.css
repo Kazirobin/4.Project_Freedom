@@ -39,7 +39,6 @@
   position: relative;
 }
 .navbar__logo__link {
-  padding-inline-end: 10vw;
   font-family: var(--font--logo);
   font-size: 50px;
   font-weight: 700;
@@ -149,6 +148,9 @@
 @media (max-width:700px){
   .navbar__logo{
     display: inline-block;
+  }
+  .navbar__logo__link{
+    padding-inline-end: 10vw;
   }
   .navbar__action.active{
     display: block;
