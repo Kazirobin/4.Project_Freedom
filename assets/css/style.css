@@ -31,8 +31,15 @@
 .navbar__bars {
   display: none;
 }
+.navbar__action.active{
+  display: none;
+}
 /* logo design  */
+.navbar__logo{
+  position: relative;
+}
 .navbar__logo__link {
+  padding-inline-end: 10vw;
   font-family: var(--font--logo);
   font-size: 50px;
   font-weight: 700;
@@ -106,4 +113,54 @@
   background-color: var(--bg--dark);
   padding: 20px;
   cursor: pointer;
+}
+/* navbar bar  */
+.navbar__bars{
+  height: 60px;
+  width: 50px;
+  display:none;
+  position: absolute;
+}
+.navbar__bar{
+  background-color: #fff;
+  height: 4px;
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+}
+.navbar__bar:first-child{
+  margin-top: 17px;
+}
+@media (max-width:1100px){
+  .navbar__action{
+    display: none;
+  }
+  .navbar__action.active{
+    display: inline-block;
+  }
+  .navbar{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .navbar__logo{
+    display: inline-block;
+  }
+}
+@media (max-width:700px){
+  .navbar__logo{
+    display: inline-block;
+  }
+  .navbar__action.active{
+    display: block;
+    margin-top: 20px;
+  }
+  .navbar__bars{
+    display: inline-block;
+  }
+  .navbar__menu{
+    display: none;
+  }
+  .navbar__menu.active{
+    display: flex;
+  }
 }
