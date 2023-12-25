@@ -19,7 +19,7 @@
     <nav class="navbar">
       <!-- logo  -->
       <div class="navbar__logo">
-        <a class="navbar__logo__link" href="#">Freedom</a>
+        <a class="navbar__logo__link" href="#" onclick="showSection('all')">Freedom</a>
               <!-- bar  -->
       <div class="navbar__bars">
         <span class="navbar__bar"></span>
@@ -44,27 +44,27 @@
       <!-- menu -->
       <ul class="navbar__menu">
         <li class="navbar__menu__item">
-          <a class="navbar__menu__item__link" href="#"
+          <a class="navbar__menu__item__link" href="#" onclick="showSection('home')"
             ><i class="fa fa-home"></i><br />Home</a
           >
         </li>
         <li class="navbar__menu__item">
-          <a class="navbar__menu__item__link" href="#"
+          <a class="navbar__menu__item__link" href="#" onclick="showSection('profile')"
             ><i class="fa fa-user"></i><br />Profile</a
           >
         </li>
         <li class="navbar__menu__item">
-          <a class="navbar__menu__item__link" href="#"
+          <a class="navbar__menu__item__link" href="#" onclick="showSection('massage')"
             ><i class="fa fa-envelope"></i><br />Massage</a
           >
         </li>
         <li class="navbar__menu__item">
-          <a class="navbar__menu__item__link" href="#"
+          <a class="navbar__menu__item__link" href="#" onclick="showSection('notification')"
             ><i class="fa fa-comment"></i><br />Notification</a
           >
         </li>
         <li class="navbar__menu__item">
-          <a class="navbar__menu__item__link" href="#"
+          <a class="navbar__menu__item__link" href="#" onclick="showSection('settings')"
             ><i class="fa fa-gear"></i><br />settings
           </a>
           <ul class="submenu">
@@ -91,6 +91,13 @@
         </button>
       </div>
     </nav>
+
+
+<section id="home">home</section>
+<section id="profile">profile</section>
+<section id="massage">massage</section>
+<section id="notification">notification</section>
+<section id="settings">settings</section>
 
     <!-- js file  -->
     <script src="./assets/js/script.js"></script>
