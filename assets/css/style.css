@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Domine:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Bitter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,7 +13,9 @@
 /* default color */
 :root {
   --font--primary: sans-serif;
-  --font--secondary: serif;
+  --font--secondary: Fira Sans;
+  --font--heading: Domine;
+  --font--texts: Bitter;
   --font--logo: "Times New Roman", Times, serif;
   --text--dark: #131513;
   --text--light: #383e3a;
