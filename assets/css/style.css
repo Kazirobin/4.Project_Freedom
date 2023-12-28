@@ -77,7 +77,6 @@
 /* submenu  */
 .submenu {
   position: absolute;
-  margin-block-start: 10px;
   background-color:var(--bg--dark);
   display: none;
 }
@@ -100,7 +99,9 @@
     color: var(--text--dark);
   }
   .navbar__menu__item:hover 
-  .submenu{
+  .submenu,
+  .navbar__menu__item:hover 
+  .submenu:hover{
     display: block;
   }
 
