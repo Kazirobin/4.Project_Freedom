@@ -26,28 +26,32 @@
   --shadow: #bacec1;
 }
 /* text font style  */
-.navbar__logo__link{
+.navbar__logo__link {
   font-family: var(--font--logo);
 }
 .navbar__menu__item__link h1,
-.navbar__action__search
-{
+.navbar__action__search {
   font-family: var(--font--secondary);
 }
-.post__user__name{
+.post__user__name {
   font-family: var(--font--heading);
   font-weight: 700;
   font-size: 20px;
 }
-.post__detail__date{
+.post__detail__date {
   font-family: var(--font--texts);
   font-weight: 700;
   font-size: 18px;
 }
-.post__detail__heading{
+.post__detail__heading {
   font-family: var(--font--heading);
   font-weight: 700;
   font-size: 28px;
+}
+.post__detail__description,
+.post__detail__btn {
+  font-family: var(--font--texts);
+  font-size: 16px;
 }
 /* navbar section  */
 .navbar {
@@ -60,14 +64,14 @@
 .navbar__bars {
   display: none;
 }
-.navbar__action.active{
+.navbar__action.active {
   display: none;
 }
 /* logo design  */
-.navbar__logo{
+.navbar__logo {
   position: relative;
 }
-.navbar__logo__link{
+.navbar__logo__link {
   font-size: 50px;
   font-weight: 700;
   color: var(--text--light);
@@ -94,151 +98,147 @@
   box-shadow: 4px 4px 10px -0.5px var(--shadow);
   position: relative;
 }
-.navbar__menu__item__link:hover{
+.navbar__menu__item__link:hover {
   box-shadow: 4px 4px 9px 1px var(--shadow);
 }
 /* submenu  */
 .submenu {
   position: absolute;
-  background-color:var(--bg--dark);
+  background-color: var(--bg--dark);
   display: none;
 }
-.submenu__item__link{
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  .navbar__menu__item__link,
-  .navbar__menu__item__link h1,
-  .submenu__item__link{
-    background-color: var(--bg--light);
-    color: var(--text--light);
-  }
-  .navbar__menu__item__link:hover,
-  .navbar__menu__item__link i:hover,
-  .navbar__menu__item__link h1:hover,
-  .submenu__item__link:hover {
-    color: var(--text--dark);
-  }
-  .navbar__menu__item:hover 
-  .submenu,
-  .navbar__menu__item:hover 
-  .submenu:hover{
-    display: block;
-  }
+.submenu__item__link {
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+.navbar__menu__item__link,
+.navbar__menu__item__link h1,
+.submenu__item__link {
+  background-color: var(--bg--light);
+  color: var(--text--light);
+}
+.navbar__menu__item__link:hover,
+.navbar__menu__item__link i:hover,
+.navbar__menu__item__link h1:hover,
+.submenu__item__link:hover {
+  color: var(--text--dark);
+}
+.navbar__menu__item:hover .submenu,
+.navbar__menu__item:hover .submenu:hover {
+  display: block;
+}
 
-  /* search  */
-.navbar__action{
+/* search  */
+.navbar__action {
   border: 2px var(--bg--light) solid;
 }
-.navbar__action__search{
+.navbar__action__search {
   background-color: var(--bg--dark);
   padding: 10px;
   cursor: text;
   color: var(--text--dark);
   font-size: 20px;
 }
-.navbar__action__btn{
+.navbar__action__btn {
   border-left: 2px var(--bg--light) solid;
   background-color: var(--bg--dark);
   padding: 20px;
   cursor: pointer;
 }
 /* navbar bar  */
-.navbar__bars{
+.navbar__bars {
   height: 60px;
   width: 50px;
-  display:none;
+  display: none;
   position: absolute;
 }
-.navbar__bar{
+.navbar__bar {
   background-color: #fff;
   height: 4px;
   width: 100%;
   display: block;
   margin-top: 8px;
 }
-.navbar__bar:first-child{
+.navbar__bar:first-child {
   margin-top: 17px;
 }
-@media (max-width:1150px){
-  .navbar__action{
+@media (max-width: 1150px) {
+  .navbar__action {
     display: none;
   }
-  .navbar__action.active{
+  .navbar__action.active {
     display: inline-block;
   }
-  .navbar{
+  .navbar {
     flex-direction: column;
     gap: 20px;
   }
-  .navbar__logo__link{
+  .navbar__logo__link {
     padding-inline-end: 50px;
   }
 }
-@media (max-width:700px){
-  .navbar__logo{
+@media (max-width: 700px) {
+  .navbar__logo {
     display: inline-block;
   }
-  .navbar__logo__link{
+  .navbar__logo__link {
     padding-inline-end: 10vw;
   }
-  .navbar__action.active{
+  .navbar__action.active {
     display: block;
     margin-top: 20px;
   }
-  .navbar__bars{
+  .navbar__bars {
     display: inline-block;
   }
-  .navbar__menu{
+  .navbar__menu {
     display: none;
   }
-  .navbar__menu.active{
+  .navbar__menu.active {
     display: flex;
   }
 }
-@media (max-width:600px){
-  .navbar__action__search{
+@media (max-width: 600px) {
+  .navbar__action__search {
     width: 180px;
   }
-  .navbar__menu.active{
+  .navbar__menu.active {
     flex-direction: column;
   }
-  .navbar__menu__item__link{
+  .navbar__menu__item__link {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-block: 2px;
   }
-  .navbar__menu__item__link i{
-    
+  .navbar__menu__item__link i {
     padding-right: 12px;
     display: inline-block;
   }
-
 }
 
 /* home section  */
-.home{
+.home {
   display: flex;
   padding-inline: 50px;
 }
-.container{
+.container {
   width: 65%;
   background-color: var(--bg--dark);
 }
-.sidebar{
+.sidebar {
   width: 35%;
   padding-inline-start: 30px;
   padding-block-start: 30px;
   background-color: var(--bg--light);
 }
 /* post design  */
-.post__user{
+.post__user {
   display: flex;
   align-items: flex-end;
 }
-.post__user__logo img{
+.post__user__logo img {
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -248,21 +248,46 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.post__user__name{
+.post__user__name {
   display: inline-block;
   padding-inline-start: 10px;
   padding-block-end: 20px;
 }
-.post__img{
+.post__img {
   float: left;
   display: inline-flex;
   justify-content: center;
   height: 300px;
 }
-.posts{
+.posts {
   display: flex;
   align-items: flex-end;
+  gap: 20px;
 }
-.post__detail__date{
+.post__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.post__detail__date {
   color: var(--text--light);
+}
+.post__detail__btn {
+  display: inline-block;
+}
+@media (max-width: 800px) {
+  .posts {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .post__img img {
+    height: inherit;
+  }
+  .container {
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+  }
 }
