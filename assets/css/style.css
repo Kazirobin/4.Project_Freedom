@@ -274,6 +274,7 @@
 }
 .post__detail__btn {
   display: inline-block;
+  cursor: pointer;
 }
 @media (max-width: 800px) {
   .posts {
