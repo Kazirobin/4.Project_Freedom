@@ -19,53 +19,75 @@
     <nav class="navbar">
       <!-- logo  -->
       <div class="navbar__logo">
-        <a class="navbar__logo__link" href="#" onclick="showSection('all')">Freedom</a>
-              <!-- bar  -->
-      <div class="navbar__bars">
-        <span class="navbar__bar"></span>
-        <span class="navbar__bar"></span>
-        <span class="navbar__bar"></span>
-      </div>
-            <!-- search  -->
-      <div class="navbar__action active">
-        <input
-          class="navbar__action__search"
-          type="text"
-          name=""
-          id=""
-          placeholder="Search..."
-        />
-        <button class="navbar__action__btn">
-          <i class="fa fa-magnifying-glass"></i>
-        </button>
-      </div>
+        <a class="navbar__logo__link" href="#" onclick="showSection('all')"
+          >Freedom</a
+        >
+        <!-- bar  -->
+        <div class="navbar__bars">
+          <span class="navbar__bar"></span>
+          <span class="navbar__bar"></span>
+          <span class="navbar__bar"></span>
+        </div>
+        <!-- search  -->
+        <div class="navbar__action active">
+          <input
+            class="navbar__action__search"
+            type="text"
+            name=""
+            id=""
+            placeholder="Search..."
+          />
+          <button class="navbar__action__btn">
+            <i class="fa fa-magnifying-glass"></i>
+          </button>
+        </div>
       </div>
 
       <!-- menu -->
       <ul class="navbar__menu">
         <li class="navbar__menu__item">
-          <a class="navbar__menu__item__link" href="#" onclick="showSection('home')"
-            ><i class="fa fa-home"></i><br /><h1>Home</h1></a
+          <a
+            class="navbar__menu__item__link"
+            href="#"
+            onclick="showSection('home')"
+            ><i class="fa fa-home"></i><br />
+            <h1>Home</h1></a
           >
         </li>
         <li class="navbar__menu__item">
-          <a class="navbar__menu__item__link" href="#" onclick="showSection('profile')"
-            ><i class="fa fa-user"></i><br /><h1>Profile</h1></a
+          <a
+            class="navbar__menu__item__link"
+            href="#"
+            onclick="showSection('profile')"
+            ><i class="fa fa-user"></i><br />
+            <h1>Profile</h1></a
           >
         </li>
         <li class="navbar__menu__item">
-          <a class="navbar__menu__item__link" href="#" onclick="showSection('massage')"
-            ><i class="fa fa-envelope"></i><br /><h1>Massage</h1></a
+          <a
+            class="navbar__menu__item__link"
+            href="#"
+            onclick="showSection('massage')"
+            ><i class="fa fa-envelope"></i><br />
+            <h1>Massage</h1></a
           >
         </li>
         <li class="navbar__menu__item">
-          <a class="navbar__menu__item__link" href="#" onclick="showSection('notification')"
-            ><i class="fa fa-comment"></i><br /><h1>Notification</h1></a
+          <a
+            class="navbar__menu__item__link"
+            href="#"
+            onclick="showSection('notification')"
+            ><i class="fa fa-comment"></i><br />
+            <h1>Notification</h1></a
           >
         </li>
         <li class="navbar__menu__item">
-          <a class="navbar__menu__item__link" href="#" onclick="showSection('settings')"
-            ><i class="fa fa-gear"></i><br /><h1>Settings</h1>
+          <a
+            class="navbar__menu__item__link"
+            href="#"
+            onclick="showSection('settings')"
+            ><i class="fa fa-gear"></i><br />
+            <h1>Settings</h1>
           </a>
           <ul class="submenu">
             <li class="submenu__item">
@@ -92,42 +114,79 @@
       </div>
     </nav>
 
+    <section id="home">
+      <div class="home">
+        <div class="container">
+          <div class="post">
+            <div class="post__user">
+              <div class="post__user__logo">
+                <img src="./assets/img/user/profile 1.png" alt="" />
+              </div>
+              <div class="post__user__name">Kazi Robin</div>
+            </div>
 
-<section id="home" class="home">
-  <div class="container">
-    <div class="post">
-      <div class="post__user">
-        <div class="post__user__logo"><img src="./assets/img/user/profile 1.png" alt=""></div>
-        <div class="post__user__name">Kazi Robin</div>
+            <div class="posts">
+              <div class="post__img">
+                <img
+                  src="./assets/img/post/post1-Zucchini-Muffins-3.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="post__detail">
+                <div class="post__detail__date">SEPTEMBER 12, 2023</div>
+                <div class="post__detail__heading">
+                  Feel-Good Zucchini Muffins all
+                </div>
+                <div class="post__detail__description">
+                  The BEST healthy zucchini muffins made with all the yummy
+                  feel-good FIXME ingredients: oats, zucchini, dates, maple
+                  syrup, and olive oil. Just blitz up in a blender and pour!
+                </div>
+                <div class="post__detail__btn">...read more</div>
+              </div>
+
+              <div class="post__action">
+                <div class="post__action__icon">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <div class="post__action__icon__text">
+                    like me if you want
+                  </div>
+                </div>
+                <div class="post__action__icon">
+                  <i class="fa-solid fa-comments"></i>
+                  <div class="post__action__icon__text">
+                    Comment
+                  </div>
+                </div>
+                <div class="post__action__icon">
+                  <i class="fa-solid fa-star"></i>
+                  <div class="post__action__icon__text">
+                    add to favorite
+                  </div>
+                </div>
+                <div class="post__action__icon">
+                  <i class="fa-solid fa-share"></i>
+                  <div class="post__action__icon__text">
+                    share
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing 4 elit.Porro
+            dolorem amet, quam quisquam exercitationem omnis distinctio?
+          </h1>
+        </div>
       </div>
-
-      <div class="posts">
-        <div class="post__img"><img src="./assets/img/post/post1-Zucchini-Muffins-3.jpg" alt=""></div>
-
-      <div class="post__detail">
-        <div class="post__detail__date">SEPTEMBER 12, 2023</div>
-        <div class="post__detail__heading">Feel-Good Zucchini Muffins all</div>
-        <div class="post__detail__description">The BEST healthy zucchini muffins made with all the yummy feel-good FIXME ingredients: oats, zucchini, dates, maple syrup, and olive
-       oil. Just blitz up in a blender and pour!</div>
-        <div class="post__detail__btn">...read more</div>
-      </div>
-
-      <div class="post__action">
-        
-      </div>
-    </div>
-      </div>
-  </div>
-  <div class="sidebar">
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing 4 elit.Porro dolorem amet, quam quisquam exercitationem omnis distinctio?</h1>
-  </div>
-
-
-</section>
-<section id="profile">profile</section>
-<section id="massage">massage</section>
-<section id="notification">notification</section>
-<section id="settings">settings</section>
+    </section>
+    <section id="profile">profile</section>
+    <section id="massage">massage</section>
+    <section id="notification">notification</section>
+    <section id="settings">settings</section>
 
     <!-- js file  -->
     <script src="./assets/js/script.js"></script>
