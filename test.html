@@ -4,8 +4,71 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .posts{
+            background-color: aquamarine;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 4px;
+        }
+        .post{
+            border-radius: 10px;
+            text-align: center;
+            background-color: fuchsia;
+        }
+        button{
+            background-color: peru;
+            padding: 10px;
+            border-width: 10px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: aliceblue;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <form action="">
+        <label for="title">title</label>
+        <input type="text" name="" id="title">
+        <label for="texts">texts</label>
+        <input type="text" name="" id="texts">
+        <button type="submit">Submit</button>
+    </form>
+    <div class="posts">
+        <div class="post">
+            <h1 class="post-title">Heading</h1>
+            <p class="post-text">details</p>
+            <button class="btn">Incomplete</button>
+
+        </div>
+        <div class="post">
+            <h1 class="post-title">Heading</h1>
+            <p class="post-text">details</p>
+            <button class="btn">Incomplete</button>
+
+        </div>
+        <div class="post">
+            <h1 class="post-title">Heading</h1>
+            <p class="post-text">details</p>
+            <button class="btn">Incomplete</button>
+
+        </div>
+        <div class="post">
+            <h1 class="post-title">Heading</h1>
+            <p class="post-text">details</p>
+            <button class="btn">Incomplete</button>
+
+        </div>
+    </div>
+    <div class="Incomplete">
+        <div class="post">
+            <h1 class="post-title">Heading</h1>
+            <p class="post-text">details</p>
+            <button class="btn">delete</button>
+
+        </div>
+    </div>
 </body>
 </html>
