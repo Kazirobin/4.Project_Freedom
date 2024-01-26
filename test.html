@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .posts{
+        .posts,.Incomplete{
             background-color: aquamarine;
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-            gap: 4px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
         .post{
+            max-width: fit-content;
             border-radius: 10px;
+            margin: 20px;
             text-align: center;
             background-color: fuchsia;
         }
@@ -25,6 +27,9 @@
             font-size: 1.5rem;
             color: aliceblue;
         }
+        #delete{
+            color: red;
+        }
 
     </style>
 </head>
@@ -34,31 +39,20 @@
         <input type="text" name="" id="title">
         <label for="texts">texts</label>
         <input type="text" name="" id="texts">
-        <button type="submit">Submit</button>
+        <button type="submit" id="submit">Submit</button>
     </form>
     <div class="posts">
+
         <div class="post">
             <h1 class="post-title">Heading</h1>
             <p class="post-text">details</p>
-            <button class="btn">Incomplete</button>
+            <button class="btn" id="incomplete">incomplete</button>
 
         </div>
         <div class="post">
             <h1 class="post-title">Heading</h1>
             <p class="post-text">details</p>
-            <button class="btn">Incomplete</button>
-
-        </div>
-        <div class="post">
-            <h1 class="post-title">Heading</h1>
-            <p class="post-text">details</p>
-            <button class="btn">Incomplete</button>
-
-        </div>
-        <div class="post">
-            <h1 class="post-title">Heading</h1>
-            <p class="post-text">details</p>
-            <button class="btn">Incomplete</button>
+            <button class="btn" id="incomplete">incomplete</button>
 
         </div>
     </div>
@@ -66,9 +60,31 @@
         <div class="post">
             <h1 class="post-title">Heading</h1>
             <p class="post-text">details</p>
-            <button class="btn">delete</button>
+            <button class="btn" id="delete">delete</button>
 
         </div>
     </div>
+<script>
+const title =document.getElementById('title');
+const texts =document.getElementById('texts');
+const submit =document.getElementById('submit');
+
+const posts = document.querySelector('.posts');
+function post(title,texts){
+    title = title.value;
+    texts = texts.value;
+    let title1 = document.createElement('h1')
+    blog.classList.add('post-title')
+    let text1 = document.createElement('p')
+    blog.classList.add('post-text')
+    let blog = document.createElement('div')
+    blog.classList.add('post')
+    blog.appendChild(text1)
+    blog.appendChild(title1)
+return blog
+}
+post();
+submit.addEventListener('click',post())
+</script>
 </body>
 </html>
