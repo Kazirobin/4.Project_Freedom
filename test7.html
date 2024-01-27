@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7</title>
+    <style>
+      .output {
+        background-color: pink;
+      }
+      .blog {
+        background-color: yellowgreen;
+        display: inline-block;
+        text-align: center;
+        min-width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input">
+      <input type="text" name="" id="" class="input1" placeholder="input1" />
+      <input type="text" name="" id="" class="input2" placeholder="input2" />
+      <input type="number" name="" id="" class="input3" placeholder="input3" />
+      <button type="submit" class="submit">submit</button>
+    </div>
+    <div class="output">
+      <div class="blog">
+        <h1 class="title">one</h1>
+        <p class="text">two</p>
+        <h6 class="num">8</h6>
+      </div>
+    </div>
+    <div class="complete"></div>
+    <script>
+        const submit = document.querySelector(".submit");
+        const output = document.querySelector(".output");
+        const complete = document.querySelector(".complete");
+        const input1 = document.querySelector(".input1");
+        const input2 = document.querySelector(".input2");
+        const input3 = document.querySelector(".input3");
+        submit.addEventListener("click", () => {
+          const text1 = input1.value;
+          const text2 = input2.value;
+          const text3 = input3.value;
+          post(text1, text2, text3);
+          input1.value = "";
+          input2.value = "";
+          input3.value = "";
+        });
+        function post(text_1, text_2, text_3) {
+          let blog = document.createElement("div");
+          blog.classList.add("blog");
+          const title = document.createElement("h1");
+          title.classList.add("title");
+          title.innerHTML = text_1;
+          const text = document.createElement("h1");
+          text.classList.add("text");
+          text.innerHTML = text_2;
+          const num = document.createElement("h6");
+          num.classList.add("num");
+          num.innerHTML = text_3;
+          const btn = document.createElement("button");
+          btn.classList.add('btn')
+          btn.innerHTML='delete'
+          blog.appendChild(title);
+          blog.appendChild(text);
+          blog.appendChild(num);
+          blog.appendChild(btn);
+
+          output.appendChild(blog);
+          btn.addEventListener('click',() => {
+            if(output.contains(blog)){
+                complete.appendChild(blog)
+                output.removeChild(blog)
+            }
+            if(complete.contains(blog)){
+                complete.removeChild(blog)
+            }
+          })
+        }
+    </script>
+  </body>
+</html>

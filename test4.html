@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="text1">
+    <input type="text" name="" id="text2">
+    <button type="submit" class="btn">submit</button>
+    <div class="blog-container">
+        <div class="blog">
+            <h1 class="title1">title1</h1>
+            <h4 class="title2">title2</h1>
+        
+        </div>
+    </div>
+    <script>
+        const text1 = document.getElementById('text1');
+        const text2 = document.getElementById('text2');
+        const btn = document.querySelector('.btn');
+        const blogs = document.querySelector('.blog-container');
+        btn.addEventListener('click',() => {
+            const input1 = text1.value
+            const input2 = text2.value
+            post(input1, input2)
+            text1.value = '';
+            text2.value = '';
+        })
+        function post(text1, text2){
+            const blog = document.createElement('div')
+            blog.classList.add('blog')
+            const h1 = document.createElement('h1')
+            h1.classList.add('title1')
+            h1.innerHTML = text1
+            const h4 = document.createElement('h4')
+            h4.classList.add('title2')
+            h4.innerHTML = text2
+            const del = document.createElement('button');
+            del.classList.add('del')
+            del.innerHTML = 'delete'
+
+            blog.appendChild(h1)
+            blog.appendChild(h4)
+            blog.appendChild(del)
+            blogs.appendChild(blog)
+            del.addEventListener('click',()=>{
+                blogs.removeChild(blog);
+            })
+
+        }
+    </script>
+</body>
+</html>

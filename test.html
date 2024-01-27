@@ -1,90 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .posts,.Incomplete{
-            background-color: aquamarine;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .post{
-            max-width: fit-content;
-            border-radius: 10px;
-            margin: 20px;
-            text-align: center;
-            background-color: fuchsia;
-        }
-        button{
-            background-color: peru;
-            padding: 10px;
-            border-width: 10px;
-            border-radius: 30px;
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: aliceblue;
-        }
-        #delete{
-            color: red;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
 
-    </style>
+    .post {
+      max-width: fit-content;
+      margin: 10px;
+      border-radius: 10px;
+      text-align: center;
+      background-color: fuchsia;
+    }
+
+    .post-title {
+      margin: 0;
+    }
+
+    .post-text {
+      margin: 5px 0;
+    }
+
+    .btn {
+      padding: 5px 10px;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <form action="">
-        <label for="title">title</label>
-        <input type="text" name="" id="title">
-        <label for="texts">texts</label>
-        <input type="text" name="" id="texts">
-        <button type="submit" id="submit">Submit</button>
-    </form>
-    <div class="posts">
-
-        <div class="post">
-            <h1 class="post-title">Heading</h1>
-            <p class="post-text">details</p>
-            <button class="btn" id="incomplete">incomplete</button>
-
-        </div>
-        <div class="post">
-            <h1 class="post-title">Heading</h1>
-            <p class="post-text">details</p>
-            <button class="btn" id="incomplete">incomplete</button>
-
-        </div>
+  <form action="">
+    <label for="title">title</label>
+    <input type="text" name="" id="title">
+    <label for="texts">texts</label>
+    <input type="text" name="" id="texts">
+    <button type="button" id="submit">Submit</button>
+  </form>
+  <div class="posts">
+    <div class="post">
+      <h1 class="post-title">Heading 1</h1>
+      <p class="post-text">details</p>
+      <button class="btn" id="incomplete">incomplete</button>
     </div>
-    <div class="Incomplete">
-        <div class="post">
-            <h1 class="post-title">Heading</h1>
-            <p class="post-text">details</p>
-            <button class="btn" id="delete">delete</button>
-
-        </div>
+    <div class="post">
+      <h1 class="post-title">Heading</h1>
+      <p class="post-text">details</p>
+      <button class="btn" id="incomplete">incomplete</button>
     </div>
-<script>
-const title =document.getElementById('title');
-const texts =document.getElementById('texts');
-const submit =document.getElementById('submit');
+  </div>
+  <div class="Incomplete">
+    <div class="post">
+      <h1 class="post-title">Heading</h1>
+      <p class="post-text">details</p>
+      <button class="btn" id="delete">delete</button>
+    </div>
+  </div>
+  <script>
+    const submit = document.getElementById('submit');
+    const posts = document.querySelector('.posts');
 
-const posts = document.querySelector('.posts');
-function post(title,texts){
-    title = title.value;
-    texts = texts.value;
-    let title1 = document.createElement('h1')
-    blog.classList.add('post-title')
-    let text1 = document.createElement('p')
-    blog.classList.add('post-text')
-    let blog = document.createElement('div')
-    blog.classList.add('post')
-    blog.appendChild(text1)
-    blog.appendChild(title1)
-return blog
-}
-post();
-submit.addEventListener('click',post())
-</script>
+    submit.addEventListener('click', () => {
+      const title = document.getElementById('title');
+      const texts = document.getElementById('texts');
+
+      const newPost = createPost(title.value, texts.value);
+      posts.appendChild(newPost);
+
+      // Clear input fields after submitting
+      title.value = '';
+      texts.value = '';
+    });
+
+    function createPost(title, text) {
+      const post = document.createElement('div');
+      post.classList.add('post');
+
+      const titleEl = document.createElement('h1');
+      titleEl.classList.add('post-title');
+      titleEl.textContent = title;
+
+      const textEl = document.createElement('p');
+      textEl.classList.add('post-text');
+      textEl.textContent = text;
+
+      const incompleteBtn = document.createElement('button');
+      incompleteBtn.classList.add('btn');
+      incompleteBtn.textContent = 'incomplete';
+
+      post.appendChild(titleEl);
+      post.appendChild(textEl);
+      post.appendChild(incompleteBtn);
+
+      return post;
+    }
+  </script>
 </body>
 </html>

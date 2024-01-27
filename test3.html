@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text1">
+    <input type="text" id="text2">
+    <button type="submit" id="addBlog">Add Blog</button>
+    <div id="output"></div>
+
+    <script>
+        const input1 = document.querySelector('#text1');
+        const input2 = document.querySelector('#text2');
+        const btn = document.querySelector('#addBlog');
+        const output = document.querySelector('#output');
+
+        btn.addEventListener('click', () => {
+            let text1 = input1.value;
+            let text2 = input2.value;
+            createBlog(text1, text2);
+            input1.value = '';
+            input2.value = '';
+        });
+
+        function createBlog(text1, text2) {
+            const blog = document.createElement('div');
+            blog.classList.add('blog');
+
+            const h1 = document.createElement('h1');
+            h1.classList.add('title-1');
+            h1.innerHTML = text1;
+
+            const h4 = document.createElement('h4');
+            h4.classList.add('title-2');
+            h4.innerHTML = text2;
+
+            blog.appendChild(h1);
+            blog.appendChild(h4);
+
+            output.appendChild(blog);
+        }
+    </script>
+</body>
+</html>
