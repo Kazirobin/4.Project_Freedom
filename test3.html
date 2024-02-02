@@ -4,14 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <input type="text" id="text1">
     <input type="text" id="text2">
     <button type="submit" id="addBlog">Add Blog</button>
-    <div id="output"></div>
+    <div id="output">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
 
     <script>
+        const box = document.querySelectorAll('.box');
+        box.forEach((element,index) => {
+            if((index + 1) % 5 === 1){
+
+            }
+            if (index >= 3 && (index - 5) % 6 === 0){
+                element.style.backgroundColor = 'red'
+
+            }
+        });
+        // box[4/2].style.backgroundColor = 'red'
         const input1 = document.querySelector('#text1');
         const input2 = document.querySelector('#text2');
         const btn = document.querySelector('#addBlog');
